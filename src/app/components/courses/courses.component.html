@@ -1,0 +1,68 @@
+
+
+<div class="container">
+    <div class="row justify-content-center">
+      <ng-container *ngIf="getbook.length > 0; else notfound">
+        <div *ngFor="let item of getbook" class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body bg-success-subtle">
+              <h5 class="card-title"><b>Book Name:</b> {{ item.title }}</h5>
+              <p class="card-text"><b>Author:</b> {{ item.author }}</p>
+              <p class="card-text"><b>Price:</b> {{ item.price | currency: 'INR' }}</p>
+            </div>
+            <div class="card-footer text-end">
+              <button (click)="onEdit(item)" class="btn btn-primary">Edit</button>
+              <button (click)="delete(item.id)" class="btn btn-danger ms-2">Delete</button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <hr>
+  <ng-template #notfound>
+    <div class="text-center">
+      <i><h3>No books found</h3></i>
+    </div>
+  </ng-template>
+  <div class="container">
+    <div class="row">
+      <div [ngClass]="editMode?'col mt-4 bg-dark-subtle border border-dark p-3 rounded-5 me-2':'col col-6 border border-dark mt-4 bg-dark-subtle p-3 border-dark rounded-5 me-2' ">
+            <h3 class="mb-3">Add Book</h3>
+            <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Title" [(ngModel)]="newBook.title">
+            </div>
+            <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Author" [(ngModel)]="newBook.author">
+            </div>
+            <div class="mb-3">
+            <input type="number" class="form-control" placeholder="Price" [(ngModel)]="newBook.price">
+            </div>
+            <div class="d-flex justify-content-center">
+                <button (click)="onAdd()" class="btn btn-success" [disabled]="!newBook.price || !newBook.author || !newBook.title">Add</button>
+              </div>
+         
+      </div>
+      <div [ngClass]="editMode?'col border border-dark mt-4 ms-2 p-3 rounded-5 bg-primary-subtle':''">
+        <div *ngIf="editMode">
+            <h3 class="mb-3">Edit Book</h3>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Title" [(ngModel)]="selectedBook!.title">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Author" [(ngModel)]="selectedBook!.author">
+            </div>
+            <div class="mb-3">
+              <input type="number" class="form-control" placeholder="Price" [(ngModel)]="selectedBook!.price">
+            </div>
+            <div class="d-flex justify-content-center">
+                <button (click)="onUpdate()" class="btn btn-primary">Submit</button>
+                <button (click)="onCancel()" class="btn btn-danger ms-2">Cancel</button>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+ <hr>
+  
+

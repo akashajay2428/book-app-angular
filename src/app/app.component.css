@@ -1,0 +1,62 @@
+
+  /* Hover Animation */
+  .nav-animate {
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  .nav-animate::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffdd57;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-animate:hover::after {
+    width: 100%;
+  }
+
+  .nav-animate:hover {
+    color: #ffdd57 !important;
+  }
+
+  .nav-animate {
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  .nav-animate::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffdd57;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Hover Animation */
+.logout-btn {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect */
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Click effect */
+.logout-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

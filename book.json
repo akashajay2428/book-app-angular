@@ -1,0 +1,76 @@
+{
+  "books": [
+    {
+      "id": "7202",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "price": 500
+    },
+    {
+      "id": "c1db",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 200
+    },
+    {
+      "id": "416a",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 300
+    },
+    {
+      "id": "c342",
+      "title": "1984",
+      "author": "George Orwell",
+      "price": 2000
+    },
+    {
+      "id": "4605",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "price": 600
+    },
+    {
+      "id": "8449",
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë",
+      "price": 300
+    },
+    {
+      "id": "45d4",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "price": 600
+    },
+    {
+      "id": "7628",
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë",
+      "price": 300
+    },
+    {
+      "id": "744c",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 300
+    },
+    {
+      "id": "043b",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 200
+    },
+    {
+      "id": "68f5",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 200
+    },
+    {
+      "id": "418b",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 200
+    }
+  ]
+}

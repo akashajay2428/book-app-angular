@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<h1 class="text-center text-primary my-4">Books</h1>
+
+<div class="container">
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-4">
+      <input type="text" #authRef class="form-control" placeholder="Author">
+    </div>
+    <div class="col-md-4">
+      <input type="number" #priceRef class="form-control" placeholder="Price">
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-success btn-block" (click)="onSearch(authRef.value, priceRef.value)">Search</button>
+    </div>
+    <div class="col-md-2">
+      <button class="btn bg-primary-subtle btn-block" (click)="reset(authRef, priceRef)">Clear</button>
+    </div>
+  </div>
+
+  <div *ngIf="books.length > 0" class="row">
+    <div *ngFor="let item of books" class="col-md-3 mb-4">
+      <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #5c03bb 0%, #0046c0 100%); color: white;">
+        <div class="card-body">
+          <h5 class="card-title"><b>Book Name:</b> {{ item.title }}</h5>
+          <p class="card-text"><b>Author:</b> {{ item.author }}</p>
+          <p class="card-text"><b>Price:</b> {{ item.price | currency: 'INR' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

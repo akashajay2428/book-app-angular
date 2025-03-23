@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg shadow-lg" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand text-white fw-bold fs-4 ms-2" routerLink="/home">Book App</a>
+
+    <!-- Toggler Button for Mobile -->
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Items (Centered) + Logout Button (Right-Aligned) -->
+    <div class="collapse navbar-collapse d-flex align-items-center">
+      <!-- Center the Navigation Items -->
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white fw-semibold nav-animate" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white fw-semibold nav-animate" routerLink="/login">Login</a>
+        </li>
+        <!-- <li class="nav-item mx-3">
+          <a class="nav-link text-white fw-semibold nav-animate" routerLink="/dashboard">Dashboard</a>
+        </li> -->
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white fw-semibold nav-animate" routerLink="/course">Dashboard</a>
+        </li>
+      </ul>
+
+      <!-- Push Logout Button to the End -->
+      <div *ngIf="isTrue()" class="ms-auto">
+        <button (click)="logoutbutton()" class="btn btn-danger logout-btn">
+          Logout
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>
